@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{51076EDD-1022-4D41-9B86-C6CF087A0E8A}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>GUnit</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <ForcedIncludeFiles>
+      </ForcedIncludeFiles>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)libs\gherkin-cpp\libs\gherkin-c\include;$(ProjectDir)libs\gherkin-cpp\include;$(ProjectDir)libs\gherkin-cpp\libs\gherkin-c\src\</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <ForcedIncludeFiles>
+      </ForcedIncludeFiles>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)libs\gherkin-cpp\libs\gherkin-c\include;$(ProjectDir)libs\gherkin-cpp\include;$(ProjectDir)libs\gherkin-cpp\libs\gherkin-c\src\</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <ForcedIncludeFiles>
+      </ForcedIncludeFiles>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)libs\gherkin-cpp\libs\gherkin-c\include;$(ProjectDir)libs\gherkin-cpp\include;$(ProjectDir)libs\gherkin-cpp\libs\gherkin-c\src\</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <ForcedIncludeFiles>
+      </ForcedIncludeFiles>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)libs\gherkin-cpp\libs\gherkin-c\include;$(ProjectDir)libs\gherkin-cpp\include;$(ProjectDir)libs\gherkin-cpp\libs\gherkin-c\src\</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="include\fmem.h" />
+    <ClInclude Include="include\GUnit.h" />
+    <ClInclude Include="include\GUnit\Detail\FileUtils.h" />
+    <ClInclude Include="include\GUnit\Detail\Preprocessor.h" />
+    <ClInclude Include="include\GUnit\Detail\ProgUtils.h" />
+    <ClInclude Include="include\GUnit\Detail\RegexUtils.h" />
+    <ClInclude Include="include\GUnit\Detail\StringUtils.h" />
+    <ClInclude Include="include\GUnit\Detail\TermUtils.h" />
+    <ClInclude Include="include\GUnit\Detail\TypeTraits.h" />
+    <ClInclude Include="include\GUnit\Detail\Utility.h" />
+    <ClInclude Include="include\GUnit\GMake.h" />
+    <ClInclude Include="include\GUnit\GMock.h" />
+    <ClInclude Include="include\GUnit\GSteps.h" />
+    <ClInclude Include="include\GUnit\GTest-Lite.h" />
+    <ClInclude Include="include\GUnit\GTest.h" />
+    <ClInclude Include="libs\gherkin-cpp\include\compiler.hpp" />
+    <ClInclude Include="libs\gherkin-cpp\include\gherkin.hpp" />
+    <ClInclude Include="libs\gherkin-cpp\include\parser.hpp" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\ast.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\ast_builder.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\attachment_event.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\background.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\builder.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\comment.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\compiler.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\data_table.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\dialect.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\doc_string.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\error.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\event.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\example_table.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\feature.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\file_token_scanner.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\gherkin_document.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\gherkin_document_event.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\gherkin_line.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\item.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\location.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\parser.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\pickle.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\pickle_argument.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\pickle_cell.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\pickle_event.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\pickle_location.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\pickle_row.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\pickle_step.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\pickle_string.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\pickle_table.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\pickle_tag.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\rule_type.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\scenario.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\scenario_definition.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\scenario_outline.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\source_event.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\step.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\string_token_scanner.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\table_cell.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\table_row.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\tag.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\token.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\token_matcher.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\token_scanner.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\src\ast_node.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\src\ast_printer.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\src\error_list.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\src\file_reader.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\src\file_utf8_source.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\src\item_queue.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\src\pickle_printer.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\src\print_utilities.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\src\string_utilities.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\src\token_formatter_builder.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\src\token_queue.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\src\unicode_utilities.h" />
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\src\utf8_source.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="libs\gherkin-cpp\libs\fmem\src\fmem-winapi-tmpfile.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\ast_builder.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\ast_node.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\ast_printer.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\attachment_event.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\background.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\comment.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\compiler.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\data_table.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\dialect.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\doc_string.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\error.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\error_list.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\event.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\example_table.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\feature.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\file_reader.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\file_token_scanner.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\file_utf8_source.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\gherkin_cli.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\gherkin_document.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\gherkin_document_event.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\gherkin_generate_tokens.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\gherkin_line.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\item_queue.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\parser.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\pickle.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\pickle_cell.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\pickle_event.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\pickle_location.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\pickle_printer.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\pickle_row.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\pickle_step.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\pickle_string.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\pickle_table.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\pickle_tag.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\print_utilities.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\scenario.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\scenario_outline.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\source_event.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\step.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\string_token_scanner.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\string_utilities.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\table_cell.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\table_row.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\tag.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\token.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\token_formatter_builder.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\token_matcher.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\token_queue.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\token_scanner.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\unicode_utilities.c" />
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\utf8_source.c" />
+    <ClCompile Include="libs\gherkin-cpp\src\compiler.cpp" />
+    <ClCompile Include="libs\gherkin-cpp\src\parser.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="libs\gherkin-cpp\libs\gherkin-c\src\Makefile" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
