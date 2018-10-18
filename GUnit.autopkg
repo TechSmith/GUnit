@@ -1,0 +1,89 @@
+configurations {
+    Toolset {
+        key : "PlatformToolset";
+        choices: { v141 };
+    };
+}
+
+nuget {
+   nuspec {
+      id = GUnit;
+      version : 1.0.0.0-pre;
+      title: GUnit;
+      authors: { Kris Jusiak };
+      owners: { Kris Jusiak };
+      projectUrl: "https://github.com/TechSmith/GUnit";
+      iconUrl: "https://avatars3.githubusercontent.com/u/24781083?s=200&v=4";
+      licenseUrl : "https://www.boost.org/LICENSE_1_0.txt";
+      requireLicenseAcceptance:false;
+      summary: "Extend, Simplify and Add Gherkin/BDD to GTest/GMock";
+	  description: @"Library (native C++) to extend, simplify and add Gherkin/BDD to GTest/GMock.
+	  
+	  New features:
+      v 1.0.0.0 Compile for VS2017 and Create Native Nuget Package
+
+	  Breaking changes:
+
+		";
+      copyright:  Copyright (c) 2016-2017 Kris Jusiak (kris at jusiak dot net);
+      tags: { googlemock, mock, gunit, gmock, tdd, bdd, googletest, gtest, gherkin, cucumber, windows, native };
+   };
+
+   dependencies
+   {
+      packages:
+      {
+      };
+   };
+
+   files {
+
+      libpdb:         { #destination = ${d_lib}; };
+
+      nestedInclude:  { #destination = ${d_include}GUnit; Include\**; };
+
+      // The release/debug here works for any config that contains release
+      // Examples (debug) : Debug ENU,  DEBUG-ENU,  Debug DEU
+      // Examples (release)   : Release ENU,  RELEASE-ENU,  Release DEU
+      ("Win32", "v141", "Debug,Release") =>
+      {
+         [${0},${1},${2}] { 
+            lib:     { ${2}\GUnit.lib;
+                     }
+            libpdb:  { ${2}\GUnit.pdb;
+                     }
+            bin:     { ${2}\GUnit.pdb;
+					 }
+         };
+      };
+      ("x64", "v141", "Debug,Release") =>
+      {
+         [${0},${1},${2}] { 
+            lib:     { ${0}\${2}\GUnit.lib;
+                     }
+            libpdb:  { ${0}\${2}\GUnit.pdb;
+                     }
+            bin:     { ${0}\${2}\GUnit.pdb;
+					 }
+         };
+      };
+
+   };
+
+   props {
+      // Additional declarations to insert into consuming projects before most of the
+      // project settings. (These may be modified in visual studio by a developer
+      // consuming this package.)
+      // This node is typically not needed for most packages and may be omitted.
+   }
+
+   targets {
+      // Additional declarations to insert into consuming projects after most of the
+      // project settings. (These may NOT be modified in visual studio by a developer
+      // consuming this package.)
+      // This node is often used to set defines that are required that must be set by
+      // the consuming project in order to correctly link to the libraries in this
+      // package.  Such defines may be set either globally or only set under specific
+      // conditions.
+    }
+}
