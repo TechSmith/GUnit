@@ -93,6 +93,7 @@
       <ForcedIncludeFiles>
       </ForcedIncludeFiles>
       <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)libs\gherkin-cpp\libs\gherkin-c\include;$(ProjectDir)libs\gherkin-cpp\include;$(ProjectDir)libs\gherkin-cpp\libs\gherkin-c\src\</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -110,6 +111,7 @@
       <ForcedIncludeFiles>
       </ForcedIncludeFiles>
       <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)libs\gherkin-cpp\libs\gherkin-c\include;$(ProjectDir)libs\gherkin-cpp\include;$(ProjectDir)libs\gherkin-cpp\libs\gherkin-c\src\</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
