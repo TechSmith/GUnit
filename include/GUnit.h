@@ -12,6 +12,13 @@
 #include "GUnit/GTest-Lite.h"
 #include "GUnit/GTest.h"
 
+
+#if !defined(_WIN32)
 #if __has_include(<json.hpp>) and __has_include(<gherkin.hpp>)
 #include "GUnit/GSteps.h"
+#endif
+#else
+#if __has_include(<json.hpp>) && __has_include(<gherkin.hpp>)
+#include "GUnit/GSteps.h"
+#endif
 #endif

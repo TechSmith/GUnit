@@ -96,7 +96,11 @@ template <>
 inline auto lexical_cast<bool>(const std::string &str) {
   std::string tmp{str};
   std::transform(tmp.begin(), tmp.end(), tmp.begin(), [](auto c) { return std::tolower(c); });
+#ifndef(_WIN32)
   return tmp == "1" or tmp == "true";
+#else
+  return tmp == "1" | tmp == "true";
+#endif
 }
 
 }  // detail
@@ -105,10 +109,17 @@ inline auto lexical_cast<bool>(const std::string &str) {
 #pragma clang diagnostic ignored "-Wgnu-string-literal-operator-template"
 #endif
 
+#if !defined(_WIN32)
 template <class T, T... Chrs>
 constexpr auto operator""_gtest_string() {
   return detail::string<Chrs...>{};
 }
+#else
+template <char... Chrs>
+constexpr auto operator"" _gtest_string() {
+  return detail::string<Chrs...>{};
+}
+#endif
 
 }  // v1
 }  // testing

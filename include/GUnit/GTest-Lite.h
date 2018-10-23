@@ -35,6 +35,7 @@ struct test<false, Chars...> {
 #pragma clang diagnostic ignored "-Wgnu-string-literal-operator-template"
 #endif
 
+#if !defined(_WIN32)
 template <class T, T... Chars>
 constexpr auto operator""_test() {
   return detail::test<true, Chars...>{};
@@ -44,3 +45,14 @@ template <class T, T... Chars>
 constexpr auto operator""_test_disabled() {
   return detail::test<false, Chars...>{};
 }
+#else
+template <char... Chars>
+constexpr auto operator""_test() {
+  return detail::test<true, Chars...>{};
+}
+
+template <char... Chars>
+constexpr auto operator""_test_disabled() {
+  return detail::test<false, Chars...>{};
+}
+#endif
