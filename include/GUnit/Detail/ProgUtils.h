@@ -8,18 +8,19 @@
 #pragma once
 
 #if !defined(_WIN32)
-   #include <cxxabi.h>
-   #include <execinfo.h>
+#include <cxxabi.h>
+#include <execinfo.h>
 #endif
 #include <memory>
 #include <string>
 #include "gtest/gtest.h"
-#if defined( _WIN32 )
-   #pragma warning(push)
-   #pragma warning( disable : 4091)
-   #include <dbghelp.h>
-   #pragma warning(pop)
-#endif
+//#if defined(_WIN32)
+//#include <winnt.h>
+//#pragma warning(push)
+//#pragma warning(disable : 4091)
+//#include <dbghelp.h>
+//#pragma warning(pop)
+//#endif
 
 #if defined(__APPLE__)
 #include <libproc.h>
@@ -35,12 +36,13 @@ namespace testing {
 inline namespace v1 {
 namespace detail {
 
+#if !defined(_WIN32)
 inline std::string demangle(const std::string &mangled) {
 #if defined(_WIN32)
-   char undecoratedName[256];
-   ::UnDecorateSymbolName( mangled.c_str(), undecoratedName, 256, 0 );
-   std::string demangled = undecoratedName;
-   return demangled;
+  char undecoratedName[256];
+  ::UnDecorateSymbolName(mangled.c_str(), undecoratedName, 256, 0);
+  std::string demangled = undecoratedName;
+  return demangled;
 #else
   const auto demangled = abi::__cxa_demangle(mangled.c_str(), 0, 0, 0);
   if (demangled) {
@@ -50,6 +52,7 @@ inline std::string demangle(const std::string &mangled) {
   return {};
 #endif
 }
+#endif
 
 #if !defined(_WIN32)
 inline auto &progname() {
@@ -125,6 +128,6 @@ inline std::pair<std::string, int> addr2line(void *addr) {
 }
 #endif
 
-}  // detail
-}  // v1
-}  // testing
+}  // namespace detail
+}  // namespace v1
+}  // namespace testing
