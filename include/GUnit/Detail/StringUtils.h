@@ -96,7 +96,7 @@ template <>
 inline auto lexical_cast<bool>(const std::string &str) {
   std::string tmp{str};
   std::transform(tmp.begin(), tmp.end(), tmp.begin(), [](auto c) { return std::tolower(c); });
-#ifndef(_WIN32)
+#if !defined(_WIN32)
   return tmp == "1" or tmp == "true";
 #else
   return tmp == "1" | tmp == "true";
@@ -116,7 +116,7 @@ constexpr auto operator""_gtest_string() {
 }
 #else
 template <char... Chrs>
-constexpr auto operator"" _gtest_string() {
+constexpr auto operator""_gtest_string() {
   return detail::string<Chrs...>{};
 }
 #endif
