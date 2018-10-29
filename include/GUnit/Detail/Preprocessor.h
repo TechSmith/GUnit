@@ -19,7 +19,7 @@
   size
 #define __GUNIT_IBP_SPLIT(i, ...) \
   __GUNIT_PRIMITIVE_CAT(__GUNIT_IBP_SPLIT_, i)(__VA_ARGS__)
-#define __GUNIT_IBP_SPLIT_0(a, ...) a
+#define __GUNIT_IBP_SPLIT_0(a, ...) #a
 #define __GUNIT_IBP_SPLIT_1(a, ...) __VA_ARGS__
 #define __GUNIT_IBP_IS_VARIADIC_C(...) 1
 #define __GUNIT_IBP_IS_VARIADIC_R_1 1,
