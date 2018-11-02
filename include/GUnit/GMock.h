@@ -235,7 +235,8 @@ class GMock {
     const auto addr = (volatile int *)_ReturnAddress() - 1;
 #else
     const auto addr = (volatile int *)__builtin_return_address(0) - 1;
-#endif auto *ptr = [this] {
+#endif 
+    auto *ptr = [this] {
       fs[__PRETTY_FUNCTION__] = std::make_unique<FunctionMocker<R(TArgs...)>>();
       return static_cast<FunctionMocker<R(TArgs...)> *>(
           fs[__PRETTY_FUNCTION__].get());
