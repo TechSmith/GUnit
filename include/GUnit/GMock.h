@@ -32,6 +32,9 @@
 #pragma GCC system_header
 #pragma GCC push_options
 #pragma GCC optimize("O0")
+#elif defined(_WIN32)
+#include <intrin.h>
+#pragma intrinsic(_ReturnAddress)
 #endif
 
 namespace testing {
@@ -228,8 +231,11 @@ class GMock {
 
   template <class TName = detail::string<>, class R = void *, class... TArgs>
   R not_expected(TArgs... args) {
+#if defined(_WIN32)
+    const auto addr = (volatile int *)_ReturnAddress() - 1;
+#else
     const auto addr = (volatile int *)__builtin_return_address(0) - 1;
-    auto *ptr = [this] {
+#endif auto *ptr = [this] {
       fs[__PRETTY_FUNCTION__] = std::make_unique<FunctionMocker<R(TArgs...)>>();
       return static_cast<FunctionMocker<R(TArgs...)> *>(
           fs[__PRETTY_FUNCTION__].get());
