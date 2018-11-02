@@ -24,6 +24,8 @@ struct string {
     return str;
   }
 
+
+#if !defined(_WIN32)
   constexpr auto operator[](int N) {
     using char_t = char[];
     return char_t{Chrs..., 0}[N];
@@ -31,6 +33,32 @@ struct string {
 
   constexpr auto size() { return sizeof...(Chrs); }
 
+#else
+ private:
+  const char *const _pstr = nullptr;
+  const std::size_t _size = 0;
+
+ public:
+  constexpr auto operator[](int N) {
+    if (_pstr) {
+      return _pstr[N];
+    } else {
+      using char_t = char[];
+      return char_t{Chrs..., 0}[N];
+    }
+  }
+
+  constexpr string() : _pstr(nullptr), _size(0) {}
+  constexpr string(const char *pstr, size_t size) : _pstr(pstr), _size(size) {}
+
+  constexpr auto size() { return _pstr ? _size : sizeof...(Chrs); }
+
+  constexpr operator const char *() const {
+    return _pstr ? _pstr : c_str();
+  }
+
+#endif
+  
   template <char... Chrs_>
   constexpr auto operator+(string<Chrs_...>) {
     return string<Chrs..., Chrs_...>{};
@@ -95,10 +123,13 @@ inline auto lexical_cast<const std::string &>(const std::string &str) {
 template <>
 inline auto lexical_cast<bool>(const std::string &str) {
   std::string tmp{str};
-  std::transform(tmp.begin(), tmp.end(), tmp.begin(), [](auto c) { return std::tolower(c); });
 #if !defined(_WIN32)
+  std::transform(tmp.begin(), tmp.end(), tmp.begin(),
+                 [](auto c) { return std::tolower(c); });
   return tmp == "1" or tmp == "true";
 #else
+  std::transform(tmp.begin(), tmp.end(), tmp.begin(),
+                 [](auto c) { return ::tolower(c); });
   return tmp == "1" | tmp == "true";
 #endif
 }
@@ -115,9 +146,8 @@ constexpr auto operator""_gtest_string() {
   return detail::string<Chrs...>{};
 }
 #else
-template <char... Chrs>
-constexpr auto operator""_gtest_string() {
-  return detail::string<Chrs...>{};
+constexpr auto operator"" _gtest_string(const char *str, size_t len) {
+  return detail::string<>{str, len};
 }
 #endif
 
