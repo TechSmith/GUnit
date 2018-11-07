@@ -32,6 +32,8 @@ TEST(StringUtils, ShouldAdd2Strings) {
 
 TEST(StringUtils, ShouldMakeString) {
   static_assert(std::is_same<string<>, decltype(""_gtest_string)>::value, "");
+
+//   TODO : VS2017 doesn't work
   static_assert(
       std::is_same<string<'a', 'b', 'c'>, decltype("abc"_gtest_string)>::value,
       "");

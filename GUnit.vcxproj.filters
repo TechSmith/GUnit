@@ -1,0 +1,434 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="gherkin-cpp">
+      <UniqueIdentifier>{571c843e-1a73-46f6-ae43-253bda2003dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gherkin-cpp\fmem">
+      <UniqueIdentifier>{22def24d-c182-4459-b0a1-290c2571c40b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gherkin-cpp\gherkin-c">
+      <UniqueIdentifier>{300cb6e2-29ee-4d66-ab95-7a42f31d59e3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\include\compiler.hpp">
+      <Filter>gherkin-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\include\gherkin.hpp">
+      <Filter>gherkin-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\include\parser.hpp">
+      <Filter>gherkin-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\ast.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\ast_builder.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\attachment_event.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\background.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\builder.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\comment.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\compiler.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\data_table.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\dialect.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\doc_string.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\error.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\event.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\example_table.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\feature.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\file_token_scanner.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\gherkin_document.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\gherkin_document_event.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\gherkin_line.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\item.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\location.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\parser.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\pickle.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\pickle_argument.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\pickle_cell.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\pickle_event.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\pickle_location.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\pickle_row.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\pickle_step.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\pickle_string.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\pickle_table.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\pickle_tag.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\rule_type.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\scenario.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\scenario_definition.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\scenario_outline.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\source_event.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\step.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\string_token_scanner.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\table_cell.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\table_row.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\tag.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\token.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\token_matcher.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\include\token_scanner.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\src\ast_node.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\src\ast_printer.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\src\error_list.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\src\file_reader.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\src\file_utf8_source.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\src\item_queue.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\src\pickle_printer.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\src\print_utilities.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\src\string_utilities.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\src\token_formatter_builder.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\src\token_queue.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\src\unicode_utilities.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\gherkin-cpp\libs\gherkin-c\src\utf8_source.h">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GUnit.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GUnit\GMake.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GUnit\GMock.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GUnit\GSteps.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GUnit\GTest.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GUnit\GTest-Lite.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GUnit\Detail\FileUtils.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GUnit\Detail\Preprocessor.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GUnit\Detail\ProgUtils.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GUnit\Detail\RegexUtils.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GUnit\Detail\StringUtils.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GUnit\Detail\TermUtils.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GUnit\Detail\TypeTraits.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GUnit\Detail\Utility.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\fmem.h">
+      <Filter>gherkin-cpp\fmem</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\src\compiler.cpp">
+      <Filter>gherkin-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\src\parser.cpp">
+      <Filter>gherkin-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\fmem\src\fmem-winapi-tmpfile.c">
+      <Filter>gherkin-cpp\fmem</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\ast_builder.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\ast_node.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\ast_printer.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\attachment_event.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\background.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\comment.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\compiler.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\data_table.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\dialect.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\doc_string.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\error.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\error_list.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\event.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\example_table.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\feature.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\file_reader.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\file_token_scanner.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\file_utf8_source.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\gherkin_cli.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\gherkin_document.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\gherkin_document_event.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\gherkin_generate_tokens.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\gherkin_line.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\item_queue.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\parser.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\pickle.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\pickle_cell.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\pickle_event.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\pickle_location.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\pickle_printer.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\pickle_row.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\pickle_step.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\pickle_string.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\pickle_table.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\pickle_tag.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\print_utilities.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\scenario.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\scenario_outline.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\source_event.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\step.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\string_token_scanner.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\string_utilities.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\table_cell.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\table_row.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\tag.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\token.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\token_formatter_builder.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\token_matcher.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\token_queue.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\token_scanner.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\unicode_utilities.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\gherkin-cpp\libs\gherkin-c\src\utf8_source.c">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="libs\gherkin-cpp\libs\gherkin-c\src\Makefile">
+      <Filter>gherkin-cpp\gherkin-c</Filter>
+    </None>
+  </ItemGroup>
+</Project>

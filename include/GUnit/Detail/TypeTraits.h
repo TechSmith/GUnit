@@ -164,6 +164,10 @@ const char *get_type_name() {
   return get_type_name_impl<T, 59>(
       __PRETTY_FUNCTION__,
       std::make_index_sequence<sizeof(__PRETTY_FUNCTION__) - 59 - 2>{});
+#elif defined(__WIN32)
+  return get_type_name_impl<T, 59>(
+      __FUNCSIG__,
+      std::make_index_sequence<sizeof(__FUNCSIG__) - 55 - 8>{});
 #endif
 }
 

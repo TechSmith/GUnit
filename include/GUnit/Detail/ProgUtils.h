@@ -7,11 +7,20 @@
 //
 #pragma once
 
+#if !defined(_WIN32)
 #include <cxxabi.h>
 #include <execinfo.h>
+#endif
 #include <memory>
 #include <string>
 #include "gtest/gtest.h"
+//#if defined(_WIN32)
+//#include <winnt.h>
+//#pragma warning(push)
+//#pragma warning(disable : 4091)
+//#include <dbghelp.h>
+//#pragma warning(pop)
+//#endif
 
 #if defined(__APPLE__)
 #include <libproc.h>
@@ -27,15 +36,25 @@ namespace testing {
 inline namespace v1 {
 namespace detail {
 
+#if !defined(_WIN32)
 inline std::string demangle(const std::string &mangled) {
+#if defined(_WIN32)
+  char undecoratedName[256];
+  ::UnDecorateSymbolName(mangled.c_str(), undecoratedName, 256, 0);
+  std::string demangled = undecoratedName;
+  return demangled;
+#else
   const auto demangled = abi::__cxa_demangle(mangled.c_str(), 0, 0, 0);
   if (demangled) {
     std::shared_ptr<char> free{demangled, std::free};
     return demangled;
   }
   return {};
+#endif
 }
+#endif
 
+#if !defined(_WIN32)
 inline auto &progname() {
 #if defined(__linux__)
   static auto self = __progname_full;
@@ -45,7 +64,9 @@ inline auto &progname() {
 #endif
   return self;
 }
+#endif
 
+#if !defined(_WIN32)
 inline std::string call_stack(const std::string &newline, int stack_begin = 1,
                               int stack_size = GUNIT_SHOW_STACK_SIZE) {
   static constexpr auto MAX_CALL_STACK_SIZE = 64;
@@ -80,7 +101,9 @@ inline std::string call_stack(const std::string &newline, int stack_begin = 1,
   }
   return result.str();
 }
+#endif
 
+#if !defined(_WIN32)
 inline std::pair<std::string, int> addr2line(void *addr) {
   std::stringstream cmd;
   cmd << "addr2line -Cpe " << progname() << " " << addr;
@@ -103,7 +126,8 @@ inline std::pair<std::string, int> addr2line(void *addr) {
   const auto colon = res2.find(":");
   return {res2.substr(0, colon), std::atoi(res2.substr(colon + 1).c_str())};
 }
+#endif
 
-}  // detail
-}  // v1
-}  // testing
+}  // namespace detail
+}  // namespace v1
+}  // namespace testing
