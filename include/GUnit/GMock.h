@@ -233,18 +233,26 @@ class GMock {
   R not_expected(TArgs... args) {
 #if defined(_WIN32)
     const auto addr = (volatile int *)_ReturnAddress() - 1;
+    auto *ptr = [this] {
+      fs[__FUNCSIG__] = std::make_unique<FunctionMocker<R(TArgs...)>>();
+      return static_cast<FunctionMocker<R(TArgs...)> *>(fs[__FUNCSIG__].get());
+    }();
 #else
     const auto addr = (volatile int *)__builtin_return_address(0) - 1;
-#endif 
     auto *ptr = [this] {
       fs[__PRETTY_FUNCTION__] = std::make_unique<FunctionMocker<R(TArgs...)>>();
       return static_cast<FunctionMocker<R(TArgs...)> *>(
           fs[__PRETTY_FUNCTION__].get());
     }();
+#endif
 
     if (internal::CallReaction::kAllow ==
         detail::GetCallReaction()(internal::ImplicitCast_<GMock<T> *>(this))) {
+#if defined(_WIN32)
+      ptr->SetOwnerAndName(this, __FUNCSIG__);
+#else
       ptr->SetOwnerAndName(this, __PRETTY_FUNCTION__);
+#endif
     } else {
       const auto info = [](const std::string &file, int line) {
         std::ifstream input(file);
