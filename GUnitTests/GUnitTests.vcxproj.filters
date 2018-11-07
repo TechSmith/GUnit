@@ -38,18 +38,6 @@
     <ClCompile Include="..\test\GMake.cpp">
       <Filter>Tests</Filter>
     </ClCompile>
-    <ClCompile Include="..\test\GMock.cpp">
-      <Filter>Tests</Filter>
-    </ClCompile>
-    <ClCompile Include="..\test\GSteps.cpp">
-      <Filter>Tests</Filter>
-    </ClCompile>
-    <ClCompile Include="..\test\GTest.cpp">
-      <Filter>Tests</Filter>
-    </ClCompile>
-    <ClCompile Include="..\test\GTest-Lite.cpp">
-      <Filter>Tests</Filter>
-    </ClCompile>
     <ClCompile Include="..\test\Detail\Preprocessor.cpp">
       <Filter>Tests\Detail</Filter>
     </ClCompile>
@@ -70,6 +58,18 @@
     </ClCompile>
     <ClCompile Include="..\test\Detail\Utility.cpp">
       <Filter>Tests\Detail</Filter>
+    </ClCompile>
+    <ClCompile Include="..\test\GMock.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\test\GSteps.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\test\GTest.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\test\GTest-Lite.cpp">
+      <Filter>Tests</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
